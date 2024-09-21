@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriTech Connect - Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AgriTech Connect🍀</h1>
+        </div>
+            <nav class="navbar">
+                <ul class="navbar-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="production.html">Production</a></li>
+                    <li><a href="cropguide.html">Crop Guide</a></li>
+                    <li><a href="processing.html">Processing</a></li>
+                    <li><a href="purchasing.html">Purchasing</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="agriculturists.html">Agriculturists</a></li>
+                </ul>
+                <div class="dropdown">
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropdown-content">
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </nav>
+    </header>
+    
+    <main>
+    <div class="container1">
+        <h4>AgriTech Weather App</h4>
+        <div id="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+        </div>
+        <div id="current-weather"></div>
+        <div id="forecast"></div>
+    </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 AgriTech Connect. All rights reserved.</p>
+        <p>Code with 💞 by Ntokozo Mkhize</p>
+    </footer>
+    <script>
+        const API_KEY = '6faed52d39ecdcae056bc295325d73a0';
+const CURRENT_WEATHER_API = 'https://api.openweathermap.org/data/2.5/weather';
+const FORECAST_API = 'https://api.openweathermap.org/data/2.5/forecast';
+
+document.getElementById('search-btn').addEventListener('click', () => {
+    const city = document.getElementById('city-input').value;
+    if (city) {
+        fetchWeather(city);
+        fetchForecast(city);
+    } else {
+        alert('Please enter a city name');
+    }
+});
+
+async function fetchWeather(city) {
+    try {
+        const response = await fetch(`${CURRENT_WEATHER_API}?q=${city}&appid=${API_KEY}&units=metric`);
+        if (!response.ok) throw new Error('City not found');
+        const data = await response.json();
+        displayCurrentWeather(data);
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+async function fetchForecast(city) {
+    try {
+        const response = await fetch(`${FORECAST_API}?q=${city}&appid=${API_KEY}&units=metric`);
+        if (!response.ok) throw new Error('Forecast data not available');
+        const data = await response.json();
+        displayForecast(data);
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+function displayCurrentWeather(data) {
+    const currentWeather = document.getElementById('current-weather');
+    currentWeather.innerHTML = `
+        <h2>Current Weather in ${data.name}</h2>
+        <p>Temperature: ${data.main.temp.toFixed(1)}°C</p>
+        <p>Feels like: ${data.main.feels_like.toFixed(1)}°C</p>
+        <p>Weather: ${data.weather[0].description}</p>
+        <p>Humidity: ${data.main.humidity}%</p>
+        <p>Wind Speed: ${data.wind.speed} m/s</p>
+        <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Weather icon">
+    `;
+}
+
+function displayForecast(data) {
+    const forecast = document.getElementById('forecast');
+    forecast.innerHTML = '<h2>5-Day Forecast</h2>';
+    
+    const dailyData = data.list.filter(reading => reading.dt_txt.includes('12:00:00'));
+    dailyData.forEach(day => {
+        const date = new Date(day.dt * 1000);
+        forecast.innerHTML += `
+            <div class="forecast-item">
+                <p>${date.toLocaleDateString('en-US', {weekday: 'short'})}</p>
+                <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}.png" alt="Weather icon" class="weather-icon">
+                <p>${day.main.temp.toFixed(1)}°C</p>
+            </div>
+        `;
+    });
+}
+
+// Initialize with a default city
+document.addEventListener('DOMContentLoaded', () => {
+    fetchWeather('London');
+    fetchForecast('London');
+});
+    </script>
+</body>
+</html>

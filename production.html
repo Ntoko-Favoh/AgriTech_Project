@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriTech Connect - Production</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AgriTech Connect🍀</h1>
+        </div>
+        <nav>
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="production.html">Production</a></li>
+                <li><a href="cropguide.html">Crop Guide</a></li>
+                <li><a href="processing.html">Processing</a></li>
+                <li><a href="purchasing.html">Purchasing</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="agriculturists.html">Agriculturists</a></li>
+            </ul>
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Production</h2>
+        <p>Our production process leverages cutting-edge technology to optimize every stage of crop growth:</p>
+        <ol>
+            <li>Soil Preparation: Advanced soil testing and preparation techniques</li>
+            <li>Seeding: Precision planting using GPS-guided machinery</li>
+            <li>Irrigation: Smart irrigation systems that conserve water</li>
+            <li>Fertilization: Data-driven nutrient management</li>
+            <li>Pest Control: Integrated pest management using AI and drones</li>
+            <li>Harvesting: Automated harvesting with minimal crop damage</li>
+        </ol>
+        <div class="production-tools">
+            <div class="tool">
+                <h3>Soil Analysis</h3>
+                <p>Upload your soil test results to get personalized fertilizer recommendations.</p>
+                <input type="file" accept=".pdf,.jpg,.png" id="soilTestUpload">
+                <button onclick="analyzeSoil()">Analyze Soil</button>
+            </div>
+            <div class="tool">
+                <h3>Crop Rotation Planner</h3>
+                <p>Plan your crop rotation to maximize soil health and yields.</p>
+                <select id="cropSelect">
+                    <option value="">Select previous crop</option>
+                    <option value="corn">Corn</option>
+                    <option value="soybeans">Soybeans</option>
+                    <option value="wheat">Wheat</option>
+                </select>
+                <button onclick="suggestRotation()">Get Suggestions</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 AgriTech Connect. All rights reserved.</p>
+    <p>Code with 💞 by Ntokozo Mkhize</p>
+</footer>
+<script src="script.js" defer></script>
+</body>
+</html>

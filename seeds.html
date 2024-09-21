@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Seeds</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    background-color: #28a745;
+    color: #333;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Product card styling */
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Payment button styling */
+.payment-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.payment-button button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.payment-button button:hover {
+    background-color: #218838;
+}
+
+</style>
+
+<body>
+    <header>
+        <h1>Buy Seeds Online</h1>
+        <p>Choose from a wide range of seeds:</p>
+    </header>
+    
+    <section class="products">
+        <div class="product-card">
+            <img src="cornseeds.jpg" alt="Corn Seeds">
+            <h3>Corn Seeds</h3>
+            <p>Price: $5.00 per packet</p>
+        </div>
+        
+        <div class="product-card">
+            <img src="toseeds.jpg" alt="Tomato Seeds">
+            <h3>Tomato Seeds</h3>
+            <p>Price: $3.50 per packet</p>
+        </div>
+        
+        <div class="product-card">
+            <img src="wheatseeds.jpg" alt="Wheat Seeds">
+            <h3>Wheat Seeds</h3>
+            <p>Price: $4.00 per packet</p>
+        </div>
+
+        <div class="product-card">
+            <img src="seedspackages.jpg" alt="Seed Kit">
+            <h3>Seed Kit</h3>
+            <p>Price: $10.99 per packet</p>
+        </div>
+
+        <div class="product-card">
+            <img src="cucumberseeds.jpg" alt="Cucumber Seeds">
+            <h3>Cucumber Seeds</h3>
+            <p>Price: $2.99 per packet</p>
+        </div>
+
+        <div class="product-card">
+            <img src="cotton.jpg" alt="Cotton Seeds">
+            <h3>Cotton Seeds</h3>
+            <p>Price: $2.99 per packet</p>
+        </div>
+
+        <div class="product-card">
+            <img src="bitterseeds.jpg" alt="Bitter Guard Seeds">
+            <h3>Bitter Guard Seeds</h3>
+            <p>Price: $4.99 per packet</p>
+        </div>
+
+        <div class="product-card">
+            <img src="blackpepper.jpg" alt="Black Pepper Seeds">
+            <h3>Black Pepper Seeds</h3>
+            <p>Price: $5.99 per packet</p>
+        </div>
+
+        <div class="product-card">
+            <img src="carrotseeds.jpg" alt="Carrot Seeds">
+            <h3>Carrot Seeds</h3>
+            <p>Price: $1.99 per packet</p>
+        </div>
+
+        <div class="product-card">
+            <img src="methiseeds.jpg" alt="Methi Seeds">
+            <h3>Methi Seeds</h3>
+            <p>Price: $3.50 per packet</p>
+        </div>
+
+        <div class="product-card">
+            <img src="bioseeds.jpg" alt="Bio Seeds">
+            <h3>Bio Seeds</h3>
+            <p>Price: $3.50 per packet</p>
+        </div>
+        
+        <div class="product-card">
+            <img src="gardenseeds.jpg" alt="Garden Vegetable Seeds">
+            <h3>Garden Vegetable Seeds</h3>
+            <p>Price: $3.50 per packet</p>
+        </div>
+
+        <div class="payment-button">
+            <button type="submit" id="payment-btn">Proceed to Payment</button>
+        </div>
+        
+ </section>
+
+    <footer>
+        <p>&copy; 2024 AgriTech Connect</p>
+    </footer>
+    <script>
+        document.getElementById("payment-btn").addEventListener("click", function() {
+            // Redirect to the desired page
+            window.location.href = "payment-page.html"; // Replace with your actual URL
+        });
+    </script>
+</body>
+</html>

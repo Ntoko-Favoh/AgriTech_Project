@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Produce Guide</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+       /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+header {
+    background-image: url('My Best 35 Flower Photos.jpg');
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+header .navbar ul li {
+    margin: 0 15px;
+}
+
+header .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
+}
+
+header .navbar ul li a:hover {
+    color: #ffeb3b;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 40px 0;
+    color: #3aaf83;
+}
+
+/* Chart Container */
+.chart-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Season Headers */
+.season-header {
+    background-color: #3aaf83;
+    color: white;
+    font-size: 1.8em;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Season Content */
+.season-content {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.season-content p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.season-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.season-content ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.season-content ul li strong {
+    color: #ff5722;
+}
+
+/* Footer */
+footer {
+    background-color: #3aaf83;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AgriTech Connect🍀</h1>
+        </div>
+            <nav class="navbar">
+                <ul class="navbar-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="production.html">Production</a></li>
+                    <li><a href="cropguide.html">Crop Guide</a></li>
+                    <li><a href="processing.html">Processing</a></li>
+                    <li><a href="purchasing.html">Purchasing</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="agriculturists.html">Agriculturists</a></li>
+                </ul>
+            </nav>
+    </header>
+    
+    <h1>Seasonal Produce Guide</h1>
+    
+    <div class="chart-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+            <style>
+                .season { font-size: 24px; font-weight: bold; }
+                .produce { font-size: 14px; }
+            </style>
+            
+            <!-- Background -->
+            <rect width="800" height="600" fill="#f0f0f0"/>
+            
+            <!-- Spring -->
+            <rect x="10" y="10" width="380" height="280" fill="#e6f3e6"/>
+            <text x="200" y="40" class="season" text-anchor="middle">Spring</text>
+            <text x="30" y="70" class="produce">• Asparagus</text>
+            <text x="30" y="100" class="produce">• Peas</text>
+            <text x="30" y="130" class="produce">• Leafy Greens</text>
+            <text x="30" y="160" class="produce">• Radishes</text>
+            <text x="30" y="190" class="produce">• Strawberries</text>
+            
+            <!-- Summer -->
+            <rect x="410" y="10" width="380" height="280" fill="#fff2cc"/>
+            <text x="600" y="40" class="season" text-anchor="middle">Summer</text>
+            <text x="430" y="70" class="produce">• Tomatoes</text>
+            <text x="430" y="100" class="produce">• Peppers</text>
+            <text x="430" y="130" class="produce">• Cucumbers</text>
+            <text x="430" y="160" class="produce">• Zucchini</text>
+            <text x="430" y="190" class="produce">• Melons</text>
+            <text x="430" y="220" class="produce">• Stone Fruits</text>
+            
+            <!-- Fall -->
+            <rect x="10" y="310" width="380" height="280" fill="#ffe6cc"/>
+            <text x="200" y="340" class="season" text-anchor="middle">Fall</text>
+            <text x="30" y="370" class="produce">• Pumpkins</text>
+            <text x="30" y="400" class="produce">• Apples</text>
+            <text x="30" y="430" class="produce">• Brassicas</text>
+            <text x="30" y="460" class="produce">• Root Vegetables</text>
+            <text x="30" y="490" class="produce">• Grapes</text>
+            
+            <!-- Winter -->
+            <rect x="410" y="310" width="380" height="280" fill="#e6e6ff"/>
+            <text x="600" y="340" class="season" text-anchor="middle">Winter</text>
+            <text x="430" y="370" class="produce">• Kale and Collards</text>
+            <text x="430" y="400" class="produce">• Citrus Fruits</text>
+            <text x="430" y="430" class="produce">• Leeks</text>
+            <text x="430" y="460" class="produce">• Brussels Sprouts</text>
+            <text x="430" y="490" class="produce">• Winter Squash</text>
+        </svg>
+    </div>
+
+    <div class="season-container">
+        <div id="spring-header" class="season-header">Spring (March to May)</div>
+        <div id="spring-content" class="season-content">
+            <p>Spring brings a fresh start to the growing season with tender, leafy vegetables and the first fruits of the year.</p>
+            <ul>
+                <li><strong>Asparagus:</strong> One of the first spring vegetables, asparagus is a perennial that comes back year after year.</li>
+                <li><strong>Peas:</strong> Both snow peas and garden peas thrive in cool spring weather.</li>
+                <li><strong>Leafy Greens:</strong> Spinach, lettuce, and arugula grow quickly in spring conditions.</li>
+                <li><strong>Radishes:</strong> Fast-growing and crisp, radishes are perfect for spring gardens.</li>
+                <li><strong>Strawberries:</strong> While they can produce fruit through summer, strawberries often have their first harvest in late spring.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="season-container">
+        <div id="summer-header" class="season-header">Summer (June to August)</div>
+        <div id="summer-content" class="season-content">
+            <p>Summer's warmth brings a bounty of colorful fruits and vegetables, perfect for fresh eating and preserving.</p>
+            <ul>
+                <li><strong>Tomatoes:</strong> Summer's heat helps tomatoes ripen and develop their full flavor.</li>
+                <li><strong>Peppers:</strong> Both sweet and hot peppers thrive in summer warmth.</li>
+                <li><strong>Cucumbers:</strong> These refreshing vegetables grow quickly in summer.</li>
+                <li><strong>Zucchini and Summer Squash:</strong> Known for their abundant harvests in peak summer.</li>
+                <li><strong>Melons:</strong> Watermelons, cantaloupes, and honeydew melons ripen in summer heat.</li>
+                <li><strong>Stone Fruits:</strong> Peaches, plums, and cherries typically ripen in summer.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="season-container">
+        <div id="fall-header" class="season-header">Fall (September to November)</div>
+        <div id="fall-content" class="season-content">
+            <p>Fall brings hearty vegetables and fruits perfect for warming soups, stews, and pies.</p>
+            <ul>
+                <li><strong>Pumpkins and Winter Squash:</strong> Harvested in fall, these store well for winter use.</li>
+                <li><strong>Apples:</strong> Many varieties reach peak ripeness in fall.</li>
+                <li><strong>Brassicas:</strong> Broccoli, cauliflower, and Brussels sprouts prefer cooler fall temperatures.</li>
+                <li><strong>Root Vegetables:</strong> Carrots, beets, and parsnips can be harvested in fall.</li>
+                <li><strong>Grapes:</strong> Many grape varieties are harvested in early to mid-fall.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="season-container">
+        <div id="winter-header" class="season-header">Winter (December to February)</div>
+        <div id="winter-content" class="season-content">
+            <p>Winter offers hardy greens, stored root vegetables, and bright citrus fruits to enliven the cold months.</p>
+            <ul>
+                <li><strong>Kale and Collards:</strong> These hardy greens can withstand frost and continue producing.</li>
+                <li><strong>Citrus Fruits:</strong> Oranges, grapefruits, and lemons typically ripen in winter months.</li>
+                <li><strong>Leeks:</strong> These mild onion relatives are often harvested throughout winter.</li>
+                <li><strong>Brussels Sprouts:</strong> Can be harvested well into winter in some climates.</li>
+                <li><strong>Winter Squash:</strong> While harvested in fall, many varieties store well and are consumed throughout winter.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.season-header').click(function() {
+                $(this).next('.season-content').slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>

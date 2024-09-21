@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Fertilizers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.products2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.product-card2, .prooduct-card2 {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(33.333% - 20px);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card2:hover, .prooduct-card2:hover {
+    transform: translateY(-5px);
+}
+
+.product-card2 img, .prooduct-card2 img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-card2 h3, .prooduct-card2 h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.product-card2 p, .prooduct-card2 p {
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: auto;
+}
+
+.payment-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+    .product-card2, .prooduct-card2 {
+        width: calc(50% - 20px);
+    }
+    
+    .product-card2 img, .prooduct-card2 img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card2, .prooduct-card2 {
+        width: 100%;
+    }
+    
+    .product-card2 img, .prooduct-card2 img {
+        width: 200px;
+        height: 200px;
+    }
+}
+</style>
+<body>
+    <header>
+        <h1>Buy Fertilizers Online</h1>
+        <p>Select the best fertilizers for your crops:</p>
+    </header>
+    
+    <section class="products2">
+        <div class="prooduct-card2">
+            <img src="organic.jpg" alt="Organic Fertilizer">
+            <h3>Organic Fertilizer</h3>
+            <p>Price: $12.00 per bag</p>
+        </div>
+        
+        <div class="product-card2">
+            <img src="chemical.jpg" alt="Chemical Fertilizer">
+            <h3>Chemical Fertilizer</h3>
+            <p>Price: $15.00 per bag</p>
+        </div>
+        
+        <div class="product-card2">
+            <img src="compost.jpg" alt="Compost Fertilizer">
+            <h3>Compost Fertilizer</h3>
+            <p>Price: $10.00 per bag</p>
+        </div>
+
+        <div class="payment-button">
+            <button type="submit" id="payment-btn">Proceed to Payment</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AgriTech Connect</p>
+    </footer>
+    <script>
+        document.getElementById("payment-btn").addEventListener("click", function() {
+            // Redirect to the desired page
+            window.location.href = "payment-page.html"; // Replace with your actual URL
+        });
+    </script>
+</body>
+</html>

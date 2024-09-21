@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriTech Connect - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AgriTech Connect🍀</h1>
+        </div>
+            <nav class="navbar">
+                <ul class="navbar-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="production.html">Production</a></li>
+                    <li><a href="cropguide.html">Crop Guide</a></li>
+                    <li><a href="processing.html">Processing</a></li>
+                    <li><a href="purchasing.html">Purchasing</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="agriculturists.html">Agriculturists</a></li>
+                </ul>
+                <div class="dropdown">
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropdown-content">
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </nav>
+    </header>
+    
+    <main>
+                <section class="welcome">
+                    <h2>Welcome to AgriTech Connect</h2>
+                    <p>Empowering agriculture with cutting-edge technology. Explore our tools for crop production, processing, and more.</p>
+                </section>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <img src="smart farming.jpg" alt="Smart Farming">
+                        <h3>Smart Farming</h3>
+                        <p>Leverage technology to optimize your farm operations.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="market.jpg" alt="Market Access">
+                        <h3>Market Access</h3>
+                        <p>Connect directly with buyers and expand your market reach.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="advicer.jpg" alt="Expert Advice">
+                        <h3>Expert Advice</h3>
+                        <p>Get guidance from agricultural experts to improve your yield.</p>
+                    </div>
+                </div>
+                
+                <section id="about" class="about-section">
+                    <h2>About Us</h2>
+                    <p>AgriTech Connect is a platform dedicated to empowering farmers with technology to boost their productivity and sustainability.</p>
+                    <div class="mission-vision">
+                        <div class="mission">
+                            <h3>Our Mission</h3>
+                            <p>To revolutionize agriculture through innovative technology and sustainable practices.</p>
+                        </div>
+                        <div class="vision">
+                            <h3>Our Vision</h3>
+                            <p>A world where every farmer has access to the tools and knowledge needed to thrive in the modern agricultural landscape.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="details" class="details-section">
+                    <h2>See for more details:</h2>
+                    <div class="inside">
+                        <a href="season.html" onclick="showPage('seasonwise')">
+                            <img src="season.jpg" alt="Season Wise">
+                            Season Wise
+                        </a>
+                    </div>
+                    <div class="inside">
+                        <a href="soiltype.html" onclick="showPage('soiltype')">
+                            <img src="Garden Supplies.jpg" alt="Soil Type">
+                            Soil Type
+                        </a>
+                    </div>
+                </section>
+                
+                <section id="contact" class="contact-section">
+                    <h2>Contact Us</h2>
+                    <p>Reach out to us for more information or support:</p>
+                    <form id="contactForm" onsubmit="return handleContact(event)">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <textarea id="message" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                    <div class="contact-info">
+                        <p>Email: info@agritechconnect.com</p>
+                        <p>Phone: +123 456 7890</p>
+                        <p>Address: 123 Farm Road, Agriville, AG 12345</p>
+                    </div>
+                 </div>
+                </section>
+            </main>
+             <footer>
+                    <p>&copy; 2024 AgriTech Connect. All rights reserved.</p>
+                    <p>Code with 💞 by Ntokozo Mkhize</p>
+                </footer>
+                <script src="script.js" defer></script>
+            </body>
+            </html>
