@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 
-dotenv.config('JWT_SECRET=your_jwt_secret_key'); 
+dotenv.config(); 
 
 const app = express();
 app.use(bodyParser.json());
